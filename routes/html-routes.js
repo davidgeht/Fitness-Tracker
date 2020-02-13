@@ -4,12 +4,12 @@ const path = require("path");
 const htmlroutes = express.Router();
 
 htmlroutes.get('/exercise', function(req, res){
-    let exercisePage = path.join(__dirname, "../../Develop/public/exercise.html")
+    let exercisePage = path.join(__dirname, "../public/exercise.html")
     res.sendFile(exercisePage);
 });
 
 htmlroutes.get('/stats', function(req, res){
-    let statsPage = path.join(__dirname, "../../Develop/public/stats.html")
+    let statsPage = path.join(__dirname, "../public/stats.html")
     res.sendFile(statsPage);
 });
 

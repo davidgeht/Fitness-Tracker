@@ -1,12 +1,27 @@
 const express = require("express");
 const path = require("path");
+
+var routes = express.Router();
+
 const db = require("../models");
 const Workout = require('../models/workout');
 
-var apiroutes = express.Router();
 
+routes.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname + '../public/index.html'));
+  });
+  
+routes.get('/exercise', (req, res) => {
+  res.sendFile(path.join(__dirname + '../public/exercise.html'));
+});
+  
+routes.get('/stats', (req, res) => {
+  res.sendFile(path.join(__dirname + '../public/stats.html'));
+});
 
-apiroutes.get('/api/workouts', async (req, res) => {
+//////////////////////////////
+
+routes.get('/api/workouts', async (req, res) => {
     Workout.find({})
       .then(dbWorkout => {
         res.json(dbWorkout);
@@ -17,10 +32,9 @@ apiroutes.get('/api/workouts', async (req, res) => {
   });
   
 
-  apiroutes.post('/api/workouts', async (req, res) => {
-    const workout = new Workout({ exercises: req.body });
-    Workout.create(workout)
-      .then(dbWorkout => {
+  routes.post('/api/workouts', (req, res) => {
+    Workout.create({
+    }).then(dbWorkout => {
         res.json(dbWorkout);
       })
       .catch(err => {
@@ -28,8 +42,7 @@ apiroutes.get('/api/workouts', async (req, res) => {
       });
   });
   
-  
-  apiroutes.put('/api/workouts/:id', async (req, res) => {
+  routes.put('/api/workouts/:id', async (req, res) => {
     const id = req.params.id;
     const data = req.body;
   
@@ -56,7 +69,7 @@ apiroutes.get('/api/workouts', async (req, res) => {
       });
   });
   
-  apiroutes.get('/api/workouts/range', async (req, res) => {
+  routes.get('/api/workouts/range', async (req, res) => {
     Workout.find({})
       .then(dbWorkout => {
         res.json(dbWorkout);
@@ -65,5 +78,6 @@ apiroutes.get('/api/workouts', async (req, res) => {
         res.json(err);
       });
   });
-  
-  module.exports = apiroutes;
+
+
+module.exports = routes;

@@ -10,7 +10,7 @@ let db = require("./models");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://<dbuser>:<dbpassword>@ds213079.mlab.com:13079/heroku_6xwd7mgc",{useNewUrlParser: true} );
+mongoose.connect(process.env.MONGODB_URI || "mongodb://workoutuser:workout2@ds213079.mlab.com:13079/heroku_6xwd7mgc",{useNewUrlParser: true} );
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
