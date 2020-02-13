@@ -1,51 +1,66 @@
-# Unit 17 Nosql Homework: Workout Tracker
+<h1> Fitness Tracker </h1>
 
-For this assignment, you'll create a workout tracker. You have already been provided with the front end code in the `Develop` folder. This assignment will require you to create Mongo database with a Mongoose schema and handle routes with Express.
+<h3> User Story </h3>
 
-## User Story
+<p>
+  * As a user, I want to be able to view create and track daily workouts. I want to be able to log multiple exercises in a workout on a given day. I should also be able to track the name, type, weight, sets, reps, and duration of exercise. If the exercise is a cardio exercise, I should be able to track my distance traveled.
+</p>
 
-* As a user, I want to be able to view create and track daily workouts. I want to be able to log multiple exercises in a workout on a given day. I should also be able to track the name, type, weight, sets, reps, and duration of exercise. If the exercise is a cardio exercise, I should be able to track my distance traveled.
+<h3> Description </h3>
 
-## Business Context
+<p> An application that allows the user track their workouts by creating new workouts, and adding to exisiting workouts. Also it gives the user an overview of the work out statistics. </p>
 
-A consumer will reach their fitness goals quicker when they track their workout progress.
+<h3> Technology Used </h3>
 
-## Acceptance Criteria
+<ul>
+  <li>
+    <h4>
+      Node JS
+    </h4>
+    <P>
+      Node.js will be need to run the application which is available to install from here.
+		</P>
+    <p>
+			NPM will be required to all you to install the necessary packages to run the application.
+     </p>
+  </li>
+  <li>
+   <h4>
+     MongoDB
+    </h4> 
+    <P>
+      Mongo DB is the database that is used in this application, it is a non-relational database.
+    </P>
+  </li>
+  <li>
+    <h4>
+      Mongoose
+    </h4>
+    <p>
+      Mongoose is an ORM that is used to intergrate with the database.
+    </p>
+  </li>
+</ul>
 
-When the user loads the page, they should be given the option to create a new workout, or continue with their last workout.
+<h3> 
 
-The user should be able to:
+<h3> Links </h3>
 
-  * Add exercises to a previous workout plan.
+<h5>Repository:</h5> 
+https://github.com/davidgeht/Fitness-Tracker
 
-  * Add new exercises to a new workout plan.
+<h5>Heroku: </h5>
 
-  * View multiple the combined weight of multiple exercises on the `stats` page.
+https://afternoon-beach-76169.herokuapp.com/
 
-## Commit Early and Often
 
-One of the most important skills to master as a web developer is version control. Building the habit of committing via Git is important for two reasons:
 
-1. Your commit history is a signal to employers that you are actively working on projects and learning new skills
+<h3>Using The Application </h3>
 
-2. Your commit history allows you to revert your code base in the event that you need to return to a previous state
+<p>To start using the application click <a herf="https://afternoon-beach-76169.herokuapp.com/">HERE</a></p>
 
-Follow these guidelines for committing:
 
-* Make single purpose commits for related changes to ensure a clean, manageable history. If you are fixing two issues, make two commits
 
-* Write descriptive, meaningful commit messages so that you and anyone else looking at your repository can easily understand its history
+<h3>Preview</h3>
 
-* Don't commit half done work, for the sake of your collaborators (and your future self!)
-
-* Test your application before you commit to ensure functionality at every step in the development process
-
-We would like you to have well over 200 commits by graduation, so commit early and often!
-
-## Submission on BCS
-
-You are required to submit the following:
-
-* The URL to the deployed application
-
-* The URL to the Github repository
+<img src="./preview.gif">
